@@ -1,0 +1,575 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background-image:url('ImagenFondo.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:#333;
+    padding-top:120px;
+
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 50px;
+
+    background:rgba(255,255,255,.95);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+nav ul{
+    display:flex;
+    gap:40px;
+    list-style:none;
+}
+
+nav a{
+    color:#333;
+}
+nav ul li a{
+    position:relative;
+}
+
+nav ul li a::after{
+    content:"";
+
+    position:absolute;
+    left:0;
+    bottom:-5px;
+
+    width:0;
+    height:2px;
+
+    background:#d4a017;
+
+    transition:.3s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+.hero {
+    height: 100vh;
+    background-image: url("MagicBackground.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content{
+    margin-top:180px;
+}
+
+.hero h1{
+    font-size:5rem;
+    color:white;
+    text-shadow:0 3px 15px rgba(0,0,0,.6);
+}
+.hero p{
+    font-size:1.3rem;
+    color:white;
+    text-shadow:0 2px 10px rgba(0,0,0,.6);
+}
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 30px;
+    background:#ffb100;
+    color:black;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.pagina{
+    padding:80px 10%;
+}
+
+.pagina h1{
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    color:#333;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+}
+
+button{
+    padding:15px;
+    background:#ffb100;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.datos{
+    margin-top:40px;
+    text-align:center;
+    line-height:2;
+}
+
+.logo img{
+    height: 90px;
+    width:auto;
+    display:block;
+}
+
+.catalogo .titulo-pagina{
+    color:#d4a017;
+}
+
+.contacto .titulo-pagina{
+    color:#1e3a8a;
+}
+.catalogo-menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding:50px 10%;
+}
+
+.card-menu{
+    background:white;
+    color:#222;
+    text-decoration:none;
+
+    padding:40px 20px;
+    border-radius:15px;
+
+    text-align:center;
+    font-weight:700;
+    letter-spacing:1px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+    transition:.3s;
+}
+
+.card-menu:hover{
+    transform:translateY(-8px);
+    background:#d545da;
+    color:black;
+}
+.titulo-pagina{
+    margin-top:80px;
+}
+.paquetes-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.paquete-card{
+background:white;
+border-radius:20px;
+padding:30px;
+text-align:center;
+
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+position:relative;
+
+transition:.35s;
+
+}
+
+.paquete-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(128,0,255,.20);
+}
+
+.paquete-card h2{
+color:#6a00ff;
+margin-bottom:20px;
+}
+
+.paquete-card ul{
+list-style:none;
+padding:0;
+line-height:2;
+margin-bottom:25px;
+}
+
+.precio{
+font-size:2.2rem;
+font-weight:bold;
+color:#6a00ff;
+margin-bottom:20px;
+}
+
+.btn-paquete{
+display:inline-block;
+text-decoration:none;
+
+background:#6a00ff;
+color:white;
+
+padding:12px 28px;
+border-radius:30px;
+
+transition:.3s;
+
+}
+
+.btn-paquete:hover
+
+.etiqueta{
+position:absolute;
+top:15px;
+right:15px;
+
+background:#ffcc00;
+color:#222;
+
+padding:8px 15px;
+border-radius:20px;
+
+font-size:.8rem;
+font-weight:bold
+
+}
+
+.destacado{
+border:3px solid #6a00ff;
+}
+.galeria-adicionales{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+
+    margin:40px 0 60px 0;
+}
+
+.galeria-adicionales img{
+    width:100%;
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.4s;
+}
+
+.galeria-adicionales img:hover{
+    transform:scale(1.03);
+}
+.productos-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.producto-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.35s;
+
+position:relative;
+
+
+}
+
+.producto-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(128,0,255,.20);
+}
+
+.producto-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.producto-card h2{
+margin-top:20px;
+color:#6a00ff;
+}
+
+.producto-card p{
+padding:0 25px;
+margin:15px 0;
+color:#555;
+}
+
+.producto-card .precio{
+font-size:2rem;
+font-weight:bold;
+color:#6a00ff;
+margin:20px 0;
+}
+
+.producto-card .btn-paquete{
+margin-bottom:25px;
+}
+
+.producto-card.destacado{
+border:3px solid #6a00ff;
+}
+
+.subtitulo-promociones{
+text-align:center;
+margin-top:80px;
+margin-bottom:40px;
+color:#6a00ff;
+}
+
+.promo-letras{
+background:white;
+border-radius:20px;
+overflow:hidden;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+display:grid;
+grid-template-columns:1fr 1fr;
+
+margin-top:20px;
+
+}
+
+.promo-letras img{
+width:100%;
+height:100%;
+min-height:350px;
+object-fit:cover;
+}
+
+.promo-info{
+padding:40px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:25px;
+
+}
+
+.promo-item{
+background:#f8f8f8;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.promo-item h3{
+color:#6a00ff;
+margin-bottom:10px;
+}
+
+.promo-precio{
+font-size:2rem;
+font-weight:bold;
+color:#6a00ff;
+}
+
+.promo-item.destacado{
+border:3px solid #6a00ff;
+}
+.catalogo-hero{
+    padding-top:220px;
+}
+
+.catalogo-hero h1{
+    font-size:3.5rem;
+    color:#6a00ff;
+}
+
+.catalogo-hero p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    font-size:1.1rem;
+}
+
+.categorias{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
+    padding:50px;
+}
+
+@media (max-width: 900px){
+    .categorias{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .categorias{
+        grid-template-columns:1fr;
+    }
+}
+
+.categoria-card{
+    text-decoration:none;
+    background:white;
+
+    border-radius:20px;
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+.categoria-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(106,0,255,.20);
+}
+
+.categoria-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.categoria-info{
+    padding:25px;
+}
+
+.categoria-info h2{
+    color:#6a00ff;
+    margin-bottom:10px;
+}
+
+.categoria-info p{
+    color:#666;
+}
+.mision-vision {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta-flotante {
+    width: 70%;
+    background: white;
+    color: black;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+
+    animation: subirBajar 3s infinite ease-in-out;
+}
+
+.tarjeta-flotante h2 {
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+.tarjeta-flotante p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* Animación flotante */
+@keyframes subirBajar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+.contacto-facebook {
+    margin-top: 20px;
+}
+
+.facebook-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #1877f2;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.facebook-btn span {
+    background: white;
+    color: #1877f2;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.facebook-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
